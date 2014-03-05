@@ -49,8 +49,16 @@ $(function() {
 	    );
 		
 		
+		mas = [ i,i,i,i ];
+		
+		if (i==4){
+			mas.push(i);
+			mas.push(i);
+		}
+		
+		
 		$( ".tasks-" + i ).after(
-			$( "#template-item" ).render( [ i,i,i,i ])
+			$( "#template-item" ).render( mas)
     	);
 	}
 	
