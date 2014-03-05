@@ -1,0 +1,119 @@
+@media print {
+    td {	
+		border-width: 0.5pt;
+		
+		-webkit-print-color-adjust: exact;	
+	}
+	
+	.c1 span {
+	
+		
+		border-bottom-width: 0.5pt;
+	}
+	
+} 
+
+body {
+	/*max-width: 558pt;*/
+	/*background-color: #ffffff;*/
+	padding: 5pt 27pt 72pt 27pt;
+
+	font-weight: bold;
+	font-family: 'Trebuchet MS', 'Liberation Sans', 'DejaVu Sans', sans-serif;	
+}
+
+
+
+.tasks-hr td {
+	border-radius: 5px;
+	border: 0;
+}
+
+
+.type-1 td{
+	background-color: #d73c03;
+}
+
+.type-2 td{
+	background-color: paleturquoise;
+}
+
+.type-3 td{
+	background-color: lightgreen;
+}
+
+.type-4 td{
+	background-color: lightsteelblue;
+}
+
+.step{
+	height: 15pt;
+}
+
+.step{
+	border: 0;
+}
+
+.c1 {
+	text-align: right;	
+	font-size: 14pt;
+	padding-top: 25pt;
+	
+	font-weight: normal;
+	
+	color: #555;
+}
+
+.c1 span {
+	/*text-decoration: underline;*/
+	border-bottom-style: dotted;
+	border-bottom-color: #d9d9d9;
+	border-bottom-width: 1pt;/*0.5pt;*/
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	border-style: dotted;
+	border-color: #d9d9d9;
+	border-width: 1pt;/*0.5pt;*/
+	padding: 5pt 5pt 5pt 5pt;
+
+}
+
+/*
+.row-item td:first-child { 
+    border: 0;
+    padding: 0;
+    width: 20pt;
+    text-align: center;
+}
+*/
+.row-item td:nth-child(1) { 
+    border: 0;
+    /*padding: 0;*/
+    padding-right: 0;
+    width: 40pt;
+    text-align: left;
+}
+
+.row-item td:nth-child(2) { 
+    border-left: 0;
+    border-right: 0;
+    
+}
+
+.row-item td:last-child { 
+    border-right: 0;
+    width: 20pt;
+    border: 0;
+}
+
+.row-item-1 td { 
+    border-top: 0;    
+}
+
+

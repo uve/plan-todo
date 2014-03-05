@@ -1,1 +1,99 @@
-<html><head><title>Todo Template</title><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}.c8{vertical-align:middle;width:38.2pt;border-style:solid;border-color:#d9d9d9;border-width:0.5pt;padding:5pt 5pt 5pt 5pt}.c10{vertical-align:middle;width:50.2pt;border-style:solid;border-color:#d9d9d9;border-width:0.5pt;padding:5pt 5pt 5pt 5pt}.c4{vertical-align:baseline;color:#000000;font-style:normal;font-family:"Arial";text-decoration:none;font-weight:normal}.c0{vertical-align:middle;width:426pt;border-style:solid;border-color:#d9d9d9;border-width:0.5pt;padding:5pt 5pt 5pt 5pt}.c14{vertical-align:middle;width:43.5pt;border-style:solid;border-color:#d9d9d9;border-width:0.5pt;padding:5pt 5pt 5pt 5pt}.c2{line-height:1.0;padding-top:0pt;text-align:center;direction:ltr;padding-bottom:0pt}.c5{line-height:1.0;padding-top:0pt;height:11pt;direction:ltr;padding-bottom:0pt}.c9{line-height:1.0;padding-top:0pt;direction:ltr;padding-bottom:0pt}.c13{max-width:558pt;background-color:#ffffff;padding:72pt 27pt 72pt 27pt}.c16{margin-right:auto;border-collapse:collapse;margin-left:auto}.c12{height:11pt;direction:ltr}.c1{text-align:right;direction:ltr}.c3{font-size:14pt}.c6{text-decoration:underline}.c11{text-align:left}.c15{height:35pt}.c7{height:27pt}.title{widows:2;padding-top:0pt;line-height:1.15;orphans:2;text-align:left;color:#000000;font-size:21pt;font-family:"Trebuchet MS";padding-bottom:0pt;page-break-after:avoid}.subtitle{widows:2;padding-top:0pt;line-height:1.15;orphans:2;text-align:left;color:#666666;font-style:italic;font-size:13pt;font-family:"Trebuchet MS";padding-bottom:10pt;page-break-after:avoid}li{color:#000000;font-size:11pt;font-family:"Arial"}p{color:#000000;font-size:11pt;margin:0;font-family:"Arial"}h1{widows:2;padding-top:10pt;line-height:1.15;orphans:2;text-align:left;color:#000000;font-size:16pt;font-family:"Trebuchet MS";padding-bottom:0pt;page-break-after:avoid}h2{widows:2;padding-top:10pt;line-height:1.15;orphans:2;text-align:left;color:#000000;font-size:13pt;font-family:"Trebuchet MS";font-weight:bold;padding-bottom:0pt;page-break-after:avoid}h3{widows:2;padding-top:8pt;line-height:1.15;orphans:2;text-align:left;color:#666666;font-size:12pt;font-family:"Trebuchet MS";font-weight:bold;padding-bottom:0pt;page-break-after:avoid}h4{widows:2;padding-top:8pt;line-height:1.15;orphans:2;text-align:left;color:#666666;font-size:11pt;text-decoration:underline;font-family:"Trebuchet MS";padding-bottom:0pt;page-break-after:avoid}h5{widows:2;padding-top:8pt;line-height:1.15;orphans:2;text-align:left;color:#666666;font-size:11pt;font-family:"Trebuchet MS";padding-bottom:0pt;page-break-after:avoid}h6{widows:2;padding-top:8pt;line-height:1.15;orphans:2;text-align:left;color:#666666;font-style:italic;font-size:11pt;font-family:"Trebuchet MS";padding-bottom:0pt;page-break-after:avoid}</style></head><body class="c13"><p class="c1"><span class="c3">&nbsp; &nbsp;</span><span class="c3 c6">&nbsp; &nbsp; &nbsp; &nbsp;. &nbsp; &nbsp; &nbsp;. 2014 </span></p><p class="c12"><span class="c3"></span></p><a href="#" name="24af8a29a284483bb1d3738cec65b9402ab4b066"></a><a href="#" name="0"></a><table cellpadding="0" cellspacing="0" class="c16"><tbody><tr class="c15"><td class="c8"><p class="c5"><span class="c3"></span></p></td><td class="c14"><p class="c2"><span class="c3">&uarr;&darr;</span></p></td><td class="c10"><p class="c2"><span class="c3">&#8986;</span></p></td><td class="c0"><p class="c2"><span class="c3">task</span></p></td></tr><tr><td class="c8"><p class="c9"><img height="26" src="images/image00.png" width="32"></p></td><td class="c14"><p class="c5"><span class="c3"></span></p></td><td class="c10"><p class="c5"><span class="c3"></span></p></td><td class="c0"><p class="c5"><span class="c3"></span></p></td></tr><tr class="c7"><td class="c8"><p class="c9"><img height="26" src="images/image00.png" width="32"></p></td><td class="c14"><p class="c5"><span class="c3"></span></p></td><td class="c10"><p class="c5"><span class="c3"></span></p></td><td class="c0"><p class="c5"><span class="c3"></span></p></td></tr><tr class="c7"><td class="c8"><p class="c9 c11"><img height="26" src="images/image00.png" width="32"></p></td><td class="c14"><p class="c5 c11"><span class="c4 c3"></span></p></td><td class="c10"><p class="c5 c11"><span class="c3 c4"></span></p></td><td class="c0"><p class="c5 c11"><span class="c4 c3"></span></p></td></tr></tbody></table><hr><p class="c12"><span class="c3"></span></p></body></html>
+<html>
+<head>
+<title>Todo Template</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="jsrender.min.js"></script>
+
+</head>
+
+
+
+<script id="template-hr" type="text/x-jsrender">	 
+
+	<tr class="tasks-{{>#data}}">
+	<!--	<th></th>
+		<th>&#8986;</th>
+		<th style="font-size: 7pt">TASK</th>
+-->
+	</tr>
+</script>
+
+
+
+<script id="template-item" type="text/x-jsrender">	 
+	<tr class="row-item row-item-{{>#index+1}}">
+		<!--<td>{{>#index+1}}.</td> -->
+		<td>
+			<img height="26" src="images/checkbox-{{>#data}}.svg" width="35" alt="" />
+
+			</td>
+		<td></td>						
+		<td></td>
+				
+	</tr> 
+</script>
+
+
+<script>
+$(function() {
+	
+
+	for (var i = 1; i < 5; i++) {
+
+		$( ".type-" + i ).after(
+				$( "#template-hr" ).render( [ i ])
+	    );
+		
+		
+		$( ".tasks-" + i ).after(
+			$( "#template-item" ).render( [ i,i,i,i ])
+    	);
+	}
+	
+	
+});
+</script>
+
+
+<body>
+
+
+	<p class="c1">		
+		<span>&nbsp;&nbsp; &nbsp; &nbsp;. &nbsp; &nbsp; &nbsp;. 2014</span>
+	</p>
+
+	<table>
+		<thead>			
+		</thead>
+		<tbody>			
+			
+			<tr class="tasks-hr type-1">
+				<td colspan="3">А. Важное и срочное</td>				
+			</tr>	
+						
+			<tr><td colspan="3" class="step"></td></tr>
+			<tr class="tasks-hr type-2">
+				<td colspan="3">B. Важное</td>				
+			</tr>	
+
+			
+			<tr><td colspan="3" class="step""></td></tr>
+			<tr class="tasks-hr type-3">
+				<td colspan="3">C. Не важное, но срочное</td>			
+			</tr>	
+
+			<tr><td colspan="3" class="step""></td></tr>			
+			<tr class="tasks-hr type-4">
+				<td colspan="3">D. На потом</td>				
+			</tr>	
+
+				
+		</tbody>
+	</table>	
+
+</body>
+</html>
