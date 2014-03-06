@@ -1,0 +1,153 @@
+
+<!-- <!DOCTYPE html>  // kills my div positioning! why? -->
+<html> 
+    <head> 
+        <title>Animated Sine wave using HTML5 canvas</title> 
+
+        <script src="raphael-min.js" type="text/javascript" charset="utf-8"></script> 
+
+<script type="text/javascript" charset="utf-8"> 
+
+    function byid(id)
+    {
+        return document.getElementById(id);
+    }
+
+
+    
+
+   
+
+    function path_line(ctx, x0,y0, x1,y1)
+    {
+        ctx.beginPath();
+
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(x1, y1);
+
+        ctx.stroke(); 
+        ctx.closePath();
+    }
+
+ 
+    var canw, canh;
+
+
+    function init()
+    {
+        var canvas = byid('canv');
+        var ctx = canvas.getContext("2d");
+        canw = canvas.width;
+        canh = canvas.height;
+
+	step_w = canvas.width/8;
+	step_h = canvas.height/10;
+	
+
+        draw(ctx);
+    };
+
+  
+    function path_sin(ctx, i, start)
+    {
+        // sine path from 0 to rads radians scales by sx
+
+	h = 51 + start;
+   	var px = 0;
+
+
+        var N = 100;
+        var dx=2*(Math.PI)/N;
+
+        var x=Math.PI/2;
+        var py = h-50;
+
+	if (i%2 == 0){
+
+            x=(3/2)*Math.PI;
+            py = h+50;
+
+	}
+     
+
+        var p0 = "M"+ px +","+ py;
+
+        ctx.beginPath();
+
+       
+        for (var i=0;i<N*2;i++)
+        {
+            x += dx;
+            y = Math.sin(x)/2;
+
+            py = h - 50*y;
+	    if (i==0){
+	     ctx.moveTo(px, py);
+	    }	
+            px += (step_w*2/(Math.PI))*dx;
+
+
+
+            ctx.lineTo(px, py);
+        }
+        ctx.stroke(); 
+        ctx.closePath();
+    }
+
+
+    function draw(ctx)
+    {
+
+
+	//    var r = (step_w/40) * 2.0*Math.PI;
+
+
+        ctx.clearRect(0, 0, canw, canh);
+
+        ctx.fillStyle = "rgba(0,0,0,0)";
+        ctx.strokeStyle = "rgba(0,0,0)";
+       
+      
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+
+
+
+	for(i=0; i<4; i++){
+                var step = 2*i*step_h+10;
+	        path_line(ctx,0, step ,canw, step);
+	}
+
+	
+	for(i=0; i<2; i++){
+	        path_line(ctx,(4*i+2)*step_w, 0 ,(4*i+2)*step_w,canh);
+	}
+
+
+	for(i=0; i<10; i++){
+	        path_sin(ctx, i, i*step_h);
+	}
+
+ 
+
+
+    }
+
+
+    window.onload = function () {
+        init();
+    }
+
+</script> 
+
+    </head> 
+    <body style=" font-family:sans-serif,Helvetica; width:100%;height:100%"> 
+
+
+        <canvas id="canv" height="827px" width="583px" style="background-color:#e06056; position:absolute; top:10; left:10;">Canvas Not supported, sorry.</canvas>
+
+
+
+    </body> 
+</html>
+
