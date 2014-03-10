@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Todo Template</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+
+<link type="text/css" href="main.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="jsrender.min.js"></script>
+
+</head>
+
+
+
+<script id="template-hr" type="text/x-jsrender">	 
+
+	<tr class="tasks-{{>#data}}">
+	<!--	<th></th>
+		<th>&#8986;</th>
+		<th style="font-size: 7pt">TASK</th>
+-->
+	</tr>
+</script>
+
+
+
+<script id="template-item" type="text/x-jsrender">	 
+	<tr class="row-item row-item-{{>#index+1}}">
+		<!--<td>{{>#index+1}}.</td> -->
+		<td>
+			<img height="26" src="images/checkbox-{{>#data}}.svg" width="35" alt="" />
+
+			</td>
+		<td></td>						
+		<td></td>
+				
+	</tr> 
+</script>
+
+
+<script>
+$(function() {
+	
+
+	for (var i = 1; i < 5; i++) {
+
+		$( ".type-" + i ).after(
+				$( "#template-hr" ).render( [ i ])
+	    );
+		
+		
+		mas = [ i,i,i,i ];
+		
+		if (i==4){
+			mas.push(i);
+			mas.push(i);
+		}
+		
+		
+		$( ".tasks-" + i ).after(
+			$( "#template-item" ).render( mas)
+    	);
+	}
+	
+	
+});
+</script>
+
+
+<body>
+
+
+	<p class="c1">		
+		<span>&nbsp;&nbsp; &nbsp; &nbsp;. &nbsp; &nbsp; &nbsp;. 2014</span>
+	</p>
+
+	<table>
+		<thead>			
+		</thead>
+		<tbody>			
+			
+			<tr class="tasks-hr type-1">
+				<td colspan="3">А. Важное и срочное</td>				
+			</tr>	
+						
+			<tr><td colspan="3" class="step"></td></tr>
+			<tr class="tasks-hr type-2">
+				<td colspan="3">B. Важное</td>				
+			</tr>	
+
+			
+			<tr><td colspan="3" class="step""></td></tr>
+			<tr class="tasks-hr type-3">
+				<td colspan="3">C. Не важное, но срочное</td>			
+			</tr>	
+
+			<tr><td colspan="3" class="step""></td></tr>			
+			<tr class="tasks-hr type-4">
+				<td colspan="3">D. На потом</td>				
+			</tr>	
+
+				
+		</tbody>
+	</table>	
+
+</body>
+</html>

@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html> 
-    <head> 
-        <title>Soccer</title> 
 
-        <script src="raphael-min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="raphael.export.js" type="text/javascript" charset="utf-8"></script>  
-	
-
-<script type="text/javascript" charset="utf-8"> 
-
-  paper = null;
-  size_x = 583;
-  size_y = 827;
-	
-  R = 50;
-  r = Math.sqrt(3)*R/2;
-
-  background = "#FFF";
-  stroke_color = "#000";
-  stroke_width = 1;
 
   
 Raphael.fn.hexagon = function(move_x, move_y, radius, fill) {
@@ -37,10 +17,23 @@ Raphael.fn.hexagon = function(move_x, move_y, radius, fill) {
 
 }
 
+function draw_soccer(){
 
-  window.onload = function() {
+	size_x = 583;
+	size_y = 827;
 		
-        paper = Raphael(0, 0, size_x, size_y);
+	R = 50;
+	r = Math.sqrt(3)*R/2;
+	
+	background = "#FFF";
+	stroke_color = "#000";
+	stroke_width = 1;
+	
+
+
+	var container = document.getElementById('soccer-page');
+		
+    paper = Raphael(container, size_x, size_y);
 	
 	var rect = paper.rect(0, 0, size_x, size_y);
 
@@ -49,7 +42,6 @@ Raphael.fn.hexagon = function(move_x, move_y, radius, fill) {
         rect.strokeStyle = stroke_color;
        
 	rect.attr("stroke-width", "1");
-
 
 	x1 = 0;
 
@@ -83,19 +75,6 @@ Raphael.fn.hexagon = function(move_x, move_y, radius, fill) {
     	     	     }		  
 	   }
  	}
+}
 
-	
-	var svg = paper.toSVG();
-        document.getElementById('bar').innerHTML = svg;
- };
-  
-
-
-</script> 
-
-    </head> 
-    <body style=" font-family:sans-serif,Helvetica; width:100%;height:100%"> 
-
-	<div id="bar" style="margin-top: 900px"></div>
-</html>
 
