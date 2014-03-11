@@ -25,11 +25,16 @@ body {
 .block-page {
 	margin: 0;
 	padding: 0;
-	widtht: 148mm;
-	height: 210mm;	
+	/*widtht: 148mm;
+	height: 210mm;*/	
 	page-break-after: always;
 	
 	/*border: 1px dotted #999;*/
+}
+
+#volley-page img{
+	width: 154mm;
+	height: 218.94mm;	
 }
 
 
