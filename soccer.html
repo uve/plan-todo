@@ -6,6 +6,12 @@
         <script src="raphael-min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="raphael.export.js" type="text/javascript" charset="utf-8"></script>  
 	
+<style>	
+@page {
+  size: 8.5in 11in;
+  margin: 10%;
+ }
+ </style>
 
 <script type="text/javascript" charset="utf-8"> 
 
@@ -86,7 +92,7 @@ Raphael.fn.hexagon = function(move_x, move_y, radius, fill) {
 
 	
 	var svg = paper.toSVG();
-        document.getElementById('bar').innerHTML = svg;
+    //document.getElementById('bar').innerHTML = svg;
  };
   
 
