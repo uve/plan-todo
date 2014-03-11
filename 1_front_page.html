@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Todo Template</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+
+
+
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	widtht: 148mm;
+	/*height: 210mm;*/
+		
+}
+
+@page { 
+	size:148mm 210mm;
+	margin: 0;
+	padding: 0;
+}
+
+
+@media print {
+    .block-page {
+     page-break-after: always;
+    } 
+ } 
+
+
+
+.block-page {
+	widtht: 148mm;
+	height: 210mm;	
+	page-break-after: always;
+	
+	/*border: 1px solid black;*/
+}
+
+
+.main-pic, .main-pic img{
+	max-width: 148mm;
+	
+}
+
+.main-pic{
+	padding-top: 25mm;
+	margin: 0 auto;
+}
+
+
+.bottom-pic, .bottom-pic img{
+	max-width: 128mm;
+	
+}
+
+
+
+.bottom-pic{
+	padding-top: 30mm;
+	margin: 0 auto;
+}
+
+
+</style>
+
+</head>
+
+
+
+
+
+
+<body>
+
+<div class="block-page">
+
+
+	<div class="main-pic"><img src="images/marketing_plan.jpg" /></div>
+	
+	<div class="bottom-pic"><img src="images/playmore007.jpg" /></div>
+
+</div>
+
+
+</body>
+</html>

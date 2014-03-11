@@ -1,6 +1,53 @@
+
+
+html{
+	widtht: 148mm;
+	/*height: 210mm;*/
+	
+	padding: 0;
+	margin: 0;
+		
+}
+
+body {
+	
+		
+	padding: 0;
+	margin: 0;
+	
+	
+	/*font-family: 'Trebuchet MS', 'Liberation Sans', 'DejaVu Sans', sans-serif;*/
+	/*font-family: 'DejaVu Sans';*/
+	 font-family: Ubuntu, sans-serif;	
+}
+
+
+.block-page {
+	margin: 0;
+	padding: 0;
+	widtht: 148mm;
+	height: 210mm;	
+	page-break-after: always;
+	
+	/*border: 1px solid black;*/
+}
+
+
+
+@page { 
+	size:148mm 210mm;
+	margin: 0;
+	padding: 0;
+}
+
+
 @media print {
+    .block-page {
+     page-break-after: always;
+    } 
+
     td {	
-		border-width: 0.5pt;
+		border-width: 0.4pt;
 		
 		-webkit-print-color-adjust: exact;	
 	}
@@ -8,18 +55,73 @@
 	.c1 span {
 	
 		
-		border-bottom-width: 0.5pt;
+		border-bottom-width: 0.4pt;
 	}
 	
 } 
 
-body {
-	/*max-width: 558pt;*/
-	/*background-color: #ffffff;*/
-	padding: 5pt 27pt 72pt 27pt;
+
+
+
+
+/*********** FRONT PAGE ******************/
+
+.main-pic, .main-pic img{
+	max-width: 148mm;
+	
+}
+
+.main-pic{
+	padding-top: 25mm;
+	margin: 0 auto;
+}
+
+
+.bottom-pic, .bottom-pic img{
+	max-width: 128mm;
+	
+}
+
+
+
+.bottom-pic{
+	padding-top: 30mm;
+	margin: 0 auto;
+}
+
+/*********** FRONT PAGE ******************/
+
+
+/*********** INDEX PAGE ******************/
+
+
+.index-page {
 
 	font-weight: bold;
-	font-family: 'Trebuchet MS', 'Liberation Sans', 'DejaVu Sans', sans-serif;	
+	/*padding: 5pt 27pt 72pt 27pt;*/
+	padding-top: 0;
+	padding-left: 13mm;
+	padding-right: 13mm;
+	padding-bottom: 0;
+}
+
+.c1 {
+	text-align: right;	
+	font-size: 14pt;
+	color: #555;
+	font-weight: normal;
+	
+	margin: 0;
+	padding-top: 10mm;
+	padding-bottom: 3mm;
+	
+}
+
+.c1 span {
+	/*text-decoration: underline;*/
+	border-bottom-style: solid;
+	border-bottom-color: #d9d9d9;
+	border-bottom-width: 1pt;/*0.5pt;*/
 }
 
 
@@ -27,6 +129,8 @@ body {
 .tasks-hr td {
 	border-radius: 5px;
 	border: 0;
+	
+	padding-left: 7pt;
 }
 
 
@@ -54,22 +158,6 @@ body {
 	border: 0;
 }
 
-.c1 {
-	text-align: right;	
-	font-size: 14pt;
-	padding-top: 25pt;
-	
-	font-weight: normal;
-	
-	color: #555;
-}
-
-.c1 span {
-	/*text-decoration: underline;*/
-	border-bottom-style: dotted;
-	border-bottom-color: #d9d9d9;
-	border-bottom-width: 1pt;/*0.5pt;*/
-}
 
 table {
 	border-collapse: collapse;
@@ -77,12 +165,13 @@ table {
 }
 
 td {
-	border-style: dotted;
+	border-style: solid;
 	border-color: #d9d9d9;
 	border-width: 1pt;/*0.5pt;*/
-	padding: 5pt 5pt 5pt 5pt;
+	padding: 3pt;
 
 }
+
 
 /*
 .row-item td:first-child { 
@@ -108,12 +197,30 @@ td {
 
 .row-item td:last-child { 
     border-right: 0;
-    width: 20pt;
+    width: 2pt;
     border: 0;
 }
 
 .row-item-1 td { 
     border-top: 0;    
+}
+
+
+
+/*********** LAST PAGE ******************/
+#last-page {
+
+	
+	padding-top: 5mm;
+	padding-left: 10mm;
+	padding-right: 10mm;
+	padding-bottom: 0;
+	
+	font-weight: normal;
+	
+	page-break-after: avoid;
+	
+	text-indent: 5mm;
 }
 
 

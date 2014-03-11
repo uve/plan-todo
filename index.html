@@ -1,15 +1,17 @@
 <html>
 <head>
-<title>Todo Template</title>
+<title>Plan</title>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular&subset=Latin,Cyrillic">
 <link type="text/css" href="main.css" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="jsrender.min.js"></script>
+<script src="jsrender.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="raphael-min.js"  type="text/javascript" charset="utf-8"></script>
 
+<script src="soccer.js"  type="text/javascript" charset="utf-8"></script>
+<script src="basket.js"  type="text/javascript" charset="utf-8"></script>
 </head>
-
 
 
 <script id="template-hr" type="text/x-jsrender">	 
@@ -18,7 +20,7 @@
 	<!--	<th></th>
 		<th>&#8986;</th>
 		<th style="font-size: 7pt">TASK</th>
--->
+	-->
 	</tr>
 </script>
 
@@ -51,10 +53,12 @@ $(function() {
 		
 		mas = [ i,i,i,i ];
 		
+		/*
 		if (i==4){
 			mas.push(i);
 			mas.push(i);
 		}
+		*/
 		
 		
 		$( ".tasks-" + i ).after(
@@ -62,7 +66,8 @@ $(function() {
     	);
 	}
 	
-	
+	draw_soccer();
+	draw_basket();
 });
 </script>
 
@@ -70,6 +75,17 @@ $(function() {
 <body>
 
 
+
+<div class="block-page">
+
+	<div class="main-pic"><img src="images/marketing_plan.jpg" /></div>	
+	<div class="bottom-pic"><img src="images/playmore007.jpg" /></div>
+
+</div>
+
+
+
+<div class="block-page index-page">
 	<p class="c1">		
 		<span>&nbsp;&nbsp; &nbsp; &nbsp;. &nbsp; &nbsp; &nbsp;. 2014</span>
 	</p>
@@ -102,6 +118,28 @@ $(function() {
 				
 		</tbody>
 	</table>	
+
+</div>
+
+
+<div id="soccer-page" class="block-page"></div>
+<div id="basket-page" class="block-page"></div>
+<div id="volley-page" class="block-page"></div>
+
+
+<div id="last-page"   class="block-page">
+	<h2>Как использовать эту матрицу?</h2>
+	<p>Просто распределите туда свои дела (например, дела дня) в соответствии с их важностью и срочностью. 
+	</p><p><b>Важные и срочные дела</b> - те, которые очень важны и не терпят отлагательства. Без них все порушится, и сделать их завтра - будет уже поздно. Эти дела нужно делать сегодня, в первую очередь. В теории квадрат важных и срочных дел должен быть пустым, но на практике иногда у каждого человека бывают важные и срочные дела, часть из них порождается ленью, часть - недостатком профессионализма, а часть - форс-мажорами.
+	</p><p><b>Важные, но не срочные дела</b> - это то важное, что срочным станет в скором времени. Если вы не планируете этого дожидаться и устраивать себе ненужную гонку, то обратите на эти дела самое пристальное внимание. Примеры таких дел: текущая (плановая) работа по вашим проектам; планирование новых проектов; оценка полученных результатов по проектам.
+	</p><p><b>Дела не важные, но срочные.</b> Как правило, в этот квадрат попадают дела никак не приближающие вас к цели, какой бы она ни была, это дела, которые надо делать, но исключительно для того, чтобы их делать. Не запланированные, навязанные встречи, от которых нельзя отказаться. Если из этого можете что-то делегировать, кому-то поручить - сделайте это обязательно.
+	</p><p><b>Не важные и не срочные дела</b> - это самая противная категория дел. Они не важны, они не срочны, но именно их хочется делать. Это ваши пожиратели времени.
+	</p><p>Итого - как инструмент, матрица Эйзенхауэра работает и, более того, хорошо организует, если ей следовать. Можете собой гордиться, если квадрат "Важно и Срочно" будет у вас чаще пустым: а это вполне реально, если вы чаще будете заниматься делами квадрата "Важно, но не Срочно".
+	</p><p>Так работают профессионалы!
+	</p>
+
+</div>
+
 
 </body>
 </html>
