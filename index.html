@@ -14,27 +14,23 @@
 </head>
 
 
+<!-- <img height="26" src="images/checkbox-{{>#data}}.svg" width="35" alt="" /> -->
 <script id="template-hr" type="text/x-jsrender">	 
 
-	<tr class="tasks-{{>#data}}">
-	<!--	<th></th>
-		<th>&#8986;</th>
-		<th style="font-size: 7pt">TASK</th>
-	-->
-	</tr>
+	<tr class="gap tasks-{{>#data}}"><td colspan=2></td></tr>
 </script>
 
 
 
 <script id="template-item" type="text/x-jsrender">	 
-	<tr class="row-item row-item-{{>#index+1}}">
-		<!--<td>{{>#index+1}}.</td> -->
-		<td>
-			<img height="26" src="images/checkbox-{{>#data}}.svg" width="35" alt="" />
+	<tr class="row-item">
 
+			<td>
+				<div class="point {{:index}}" style="border-color:{{:color}};" ></div>
+		
 			</td>
-		<td><div  class="border-item"></div></td>						
-		<td></td>
+			<td><div  class="border-item"></div></td>						
+			<td></td>
 				
 	</tr> 
 </script>
@@ -46,28 +42,31 @@ $(function() {
 
 	for (var i = 1; i < 5; i++) {
 
-		$( ".type-" + i ).after(
-				$( "#template-hr" ).render( [ i ])
+		var item = $( ".type-" + i ); 
+		
+		var color = item.find('td').css("background-color");
+
+		
+		item.after(
+				$( "#template-hr" ).render( i )
 	    );
 		
-		
-		mas = [ i,i,i,i ];
-		
-		/*
-		if (i==4){
-			mas.push(i);
-			mas.push(i);
+	
+		for (var j = 1; j < 5; j++) {
+			
+			console.log(color);
+			$( ".tasks-" + i ).after(
+					$( "#template-item" ).render( { "color": color } )
+		    	);
 		}
-		*/
 		
 		
-		$( ".tasks-" + i ).after(
-			$( "#template-item" ).render( mas)
-    	);
 	}
 	
 	draw_soccer();
 	draw_basket();
+	
+	
 });
 </script>
 
